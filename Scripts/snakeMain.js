@@ -2,7 +2,7 @@ window.onload=function() {
     canv=document.getElementById("gc");
     ctx=canv.getContext("2d");
     document.addEventListener("keydown",keyPush);
-    setInterval(game,2000/15);
+    setInterval(game,1250/15);
 }
 var sColor = "blue";
 var cColor = "lime";
