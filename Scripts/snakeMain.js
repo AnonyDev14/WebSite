@@ -57,7 +57,7 @@ function game() {
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
     while (true)
     {
-        $("#score").getContext("Score : " + score)
+        $("#score").getContext("Score : " + score);
     }
 }
 
