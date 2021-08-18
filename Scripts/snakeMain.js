@@ -73,12 +73,10 @@ function keyPush(evt) {
             break;
    }
 }
-function score()
-{
-    while (true)
-    {
-        $("#score").getContext("Score : " + score);
-    }
+$('#score').text(score);
+function foundMatchingBlocks(event, params) {
+    params.elements.remove();
+    score += 100;
+    $('#score').text(score);
 }
-score()
 
