@@ -73,7 +73,4 @@ function keyPush(evt) {
             break;
    }
 }
-if(score = 0)
-{
-    setTimeout("location.reload(true);", 5000);
-}
+
