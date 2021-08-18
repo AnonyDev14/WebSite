@@ -55,6 +55,10 @@ function game() {
     }
     ctx.fillStyle=aColor;
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
+    while (true)
+    {
+        $("#score").getContext(score)
+    }
 }
 
 function keyPush(evt) {
