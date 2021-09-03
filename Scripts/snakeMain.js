@@ -39,11 +39,21 @@ function game() {
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
         if(trail[i].x==px && trail[i].y==py) {
-            tail = 1;
+            tail = 5;
             score = 0;
         }
     }
     trail.push({x:px,y:py});
+    
+    while(trail.length>tail) {
+        trail.shift();
+        }
+        if(ax==px && ay==py) {
+            tail++;
+            score = score + 1;
+            ax=Math.floor(Math.random()*tc);
+            ay=Math.floor(Math.random()*tc);
+        }
     ctx.fillStyle=aColor;
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 }
@@ -63,10 +73,6 @@ function keyPush(evt) {
             xv=0;yv=1;
             break;
    }
-}
-if(tail == 1 || tail > 1)
-{
-    tail = 1;
 }
 $('#score').text(score);
 function foundMatchingBlocks(event, params) {
