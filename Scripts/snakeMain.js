@@ -64,6 +64,10 @@ function keyPush(evt) {
             break;
    }
 }
+if(tail == 1 || tail > 1)
+{
+    tail = 1;
+}
 $('#score').text(score);
 function foundMatchingBlocks(event, params) {
     params.elements.remove();
