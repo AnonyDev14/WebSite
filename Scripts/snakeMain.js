@@ -4,9 +4,9 @@ window.onload=function() {
     document.addEventListener("keydown",keyPush);
     setInterval(game,1250/15);
 }
-var sColor = "blue";
-var cColor = "lime";
-var aColor = "red" ;
+var sColor = "yellow";
+var cColor = "black";
+var aColor = "orange" ;
 
 score = 0;
 deathT= "";
@@ -39,20 +39,11 @@ function game() {
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
         if(trail[i].x==px && trail[i].y==py) {
-            tail = 5;
+            tail = 1;
             score = 0;
         }
     }
     trail.push({x:px,y:py});
-    while(trail.length>tail) {
-    trail.shift();
-    }
-    if(ax==px && ay==py) {
-        tail++;
-        score = score + 1;
-        ax=Math.floor(Math.random()*tc);
-        ay=Math.floor(Math.random()*tc);
-    }
     ctx.fillStyle=aColor;
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 }
@@ -73,12 +64,6 @@ function keyPush(evt) {
             break;
    }
 }
-if (tail == 5)
-{
-    alert("u just die stupido");
-    return;
-}
-
 $('#score').text(score);
 function foundMatchingBlocks(event, params) {
     params.elements.remove();
