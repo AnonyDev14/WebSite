@@ -73,6 +73,12 @@ function keyPush(evt) {
             break;
    }
 }
+if (tail == 5)
+{
+    alert("u just die stupido");
+    break;
+}
+
 $('#score').text(score);
 function foundMatchingBlocks(event, params) {
     params.elements.remove();
