@@ -76,7 +76,7 @@ function keyPush(evt) {
 if (tail == 5)
 {
     alert("u just die stupido");
-    break
+    return;
 }
 
 $('#score').text(score);
